@@ -32,3 +32,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/products', [ProductController::class, 'index']);
 
 require __DIR__.'/auth.php';
+
+// Registering Modular Routes
+require base_path('app/Modules/Students/Routes/web.php');
+require base_path('app/Modules/Courses/Routes/web.php');
